@@ -1,0 +1,24 @@
+kind: Deployment
+apiVersion: apps/v1 
+
+metadata:
+  name: my-vue-app-deployment
+  namespace: my-vue-app
+
+spec: 
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-vue-app
+    
+  template:
+    metadata:
+      labels:
+        app: my-vue-app
+    spec:
+      containers:
+        - name: react-container
+          image: worlddev162/react-app-chatbot:latest
+          ports:
+            - containerPort: 5173
+          

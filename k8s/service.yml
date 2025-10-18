@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+
+metadata:
+  name: my-vue-app-service
+  namespace: my-vue-app
+spec:
+  selector:
+    app: my-vue-app
+  ports:
+    - protocol: TCP
+      port: 5173
+      targetPort: 5173
