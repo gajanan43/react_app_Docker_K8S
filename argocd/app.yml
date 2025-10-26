@@ -5,7 +5,7 @@ metadata:
   name: react-app
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: react-app=worlddev162/react_app
+    argocd-image-updater.argoproj.io/image-list: react-app=worlddev162/react-app-chatbot
     argocd-image-updater.argoproj.io/react-app.update-strategy: semver
     argocd-image-updater.argoproj.io/react-app.allow-tags: regexp:^v[0-9]+\.[0-9]+\.[0-9]+$
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/argocd-image-updater-git-creds
