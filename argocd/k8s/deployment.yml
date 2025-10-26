@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: react-container
-          image: worlddev162/react-app-chatbot:latest
+          image: worlddev162/react-app-chatbot:v1.0.0
           ports:
             - containerPort: 5173
           
