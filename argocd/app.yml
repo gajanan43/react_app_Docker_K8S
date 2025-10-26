@@ -5,16 +5,12 @@ metadata:
   name: react-app
   namespace: argocd
   annotations:
-    # Define which image(s) Image Updater should track
-  argocd-image-updater.argoproj.io/image-list: react-app=worlddev162/react_app:latest
+    argocd-image-updater.argoproj.io/image-list: react-app=worlddev162/react_app
+    argocd-image-updater.argoproj.io/react-app.update-strategy: semver
+    argocd-image-updater.argoproj.io/react-app.allow-tags: regexp:^v[0-9]+\.[0-9]+\.[0-9]+$
+    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/argocd-image-updater-git-creds
 
-  # Define how Image Updater should write back version updates to Git
-  argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/argocd-image-updater-git-creds
-
-  # Define update strategy (use 'semver', 'latest', 'digest', etc.)
-  argocd-image-updater.argoproj.io/react-app.update-strategy: semver
-
-spec:
+spec: 
   project: default
   source:
     repoURL: 'https://github.com/gajanan43/react_app_Docker_K8S'
