@@ -3,7 +3,7 @@ apiVersion: apps/v1
 
 metadata:
   name: my-vue-app-deployment
-  namespace: my-vue-app
+  namespace: react_app
 
 spec: 
   replicas: 2

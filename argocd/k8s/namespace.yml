@@ -2,4 +2,4 @@ kind: Namespace
 apiVersion: v1
 
 metadata:
-  name: my-vue-app
+  name: react_app
