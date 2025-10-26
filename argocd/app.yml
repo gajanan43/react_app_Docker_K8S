@@ -2,7 +2,7 @@ kind: Application
 apiVersion: argoproj.io/v1alpha1
 
 metadata:
-  name: my-app
+  name: react-app
   namespace: argocd
 
 spec:
@@ -13,7 +13,7 @@ spec:
     path: argocd/k8s
   destination: 
     server: 'https://kubernetes.default.svc'
-    namespace: react_app
+    namespace: react-app
   syncPolicy:
     automated:
       prune: true

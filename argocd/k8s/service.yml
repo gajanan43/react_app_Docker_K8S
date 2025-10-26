@@ -2,11 +2,11 @@ kind: Service
 apiVersion: v1
 
 metadata:
-  name: my-vue-app-service
-  namespace: react_app
+  name: react-app-service
+  namespace: react-app
 spec:
   selector:
-    app: my-vue-app
+    app: react-app
   ports:
     - protocol: TCP
       port: 5173

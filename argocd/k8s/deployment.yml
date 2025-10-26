@@ -2,19 +2,19 @@ kind: Deployment
 apiVersion: apps/v1 
 
 metadata:
-  name: my-vue-app-deployment
-  namespace: react_app
+  name: react-app-deployment
+  namespace: react-app
 
 spec: 
   replicas: 2
   selector:
     matchLabels:
-      app: my-vue-app
+      app: react-app
     
   template:
     metadata:
       labels:
-        app: my-vue-app
+        app: react-app
     spec:
       containers:
         - name: react-container
