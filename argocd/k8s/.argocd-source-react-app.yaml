@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - worlddev162/react-app-chatbot:v1.0.1
