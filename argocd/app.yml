@@ -4,18 +4,12 @@ apiVersion: argoproj.io/v1alpha1
 metadata:
   name: react-app
   namespace: argocd
-  annotations:
-    # Match image name from Deployment
-    argocd-image-updater.argoproj.io/image-list: react-app-chatbot=worlddev162/react-app-chatbot
-
-    # Use semantic versioning strategy
-    argocd-image-updater.argoproj.io/react-app-chatbot.update-strategy: semver
-
-    # Allow tags that follow vX.Y.Z pattern
-    argocd-image-updater.argoproj.io/react-app-chatbot.allow-tags: regexp:^v[0-9]+\.[0-9]+\.[0-9]+$
-
-    # Enable Git write-back using your secret
-    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/argocd-image-updater-git-creds
+  aannotations:
+  argocd-image-updater.argoproj.io/image-list: react-app-chatbot=worlddev162/react-app-chatbot
+  argocd-image-updater.argoproj.io/react-app-chatbot.image-name: worlddev162/react-app-chatbot
+  argocd-image-updater.argoproj.io/react-app-chatbot.update-strategy: semver
+  argocd-image-updater.argoproj.io/react-app-chatbot.allow-tags: regexp:^v[0-9]+\.[0-9]+\.[0-9]+$
+  argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/argocd-image-updater-git-creds
 
 spec:
   project: default
