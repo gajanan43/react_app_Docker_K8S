@@ -17,7 +17,7 @@ metadata:
     # Enable Git write-back using your secret
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/argocd-image-updater-git-creds
 
-spec: 
+spec:
   project: default
   source:
     repoURL: 'https://github.com/gajanan43/react_app_Docker_K8S'

@@ -2,5 +2,6 @@ kind: Kustomization
 
 resources:
   - namespace.yml
-  - service.yml
   - deployment.yml
+  - service.yml
+  
