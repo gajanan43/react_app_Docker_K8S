@@ -4,7 +4,7 @@ apiVersion: argoproj.io/v1alpha1
 metadata:
   name: react-app
   namespace: argocd
-  aannotations:
+  annotations:
   argocd-image-updater.argoproj.io/image-list: react-app-chatbot=worlddev162/react-app-chatbot
   argocd-image-updater.argoproj.io/react-app-chatbot.image-name: worlddev162/react-app-chatbot
   argocd-image-updater.argoproj.io/react-app-chatbot.update-strategy: semver
