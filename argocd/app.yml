@@ -5,11 +5,11 @@ metadata:
   name: react-app
   namespace: argocd
   annotations:
-  argocd-image-updater.argoproj.io/image-list: react-app-chatbot=worlddev162/react-app-chatbot
-  argocd-image-updater.argoproj.io/react-app-chatbot.image-name: worlddev162/react-app-chatbot
-  argocd-image-updater.argoproj.io/react-app-chatbot.update-strategy: semver
-  argocd-image-updater.argoproj.io/react-app-chatbot.allow-tags: regexp:^v[0-9]+\.[0-9]+\.[0-9]+$
-  argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/argocd-image-updater-git-creds
+    argocd-image-updater.argoproj.io/image-list: react-app-chatbot=worlddev162/react-app-chatbot
+    argocd-image-updater.argoproj.io/react-app-chatbot.image-name: worlddev162/react-app-chatbot
+    argocd-image-updater.argoproj.io/react-app-chatbot.update-strategy: semver
+    argocd-image-updater.argoproj.io/react-app-chatbot.allow-tags: regexp:^v[0-9]+\.[0-9]+\.[0-9]+$
+    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/argocd-image-updater-git-creds
 
 spec:
   project: default
